@@ -6,12 +6,12 @@ L.tileLayer('https://api.mapbox.com/styles/v1/elenambailey/cloq5iebz006b01pw1r7g
 }).addTo(map);
 
 
-fetch('/data/ne_10m_ports.geojson')
+fetch('/data/ne_10m_ports.geojson 2')
    .then(response => response.json())
    .then(data => {
        L.geoJSON(data, {
            onEachFeature: function (feature, layer) {
-               layer.bindPopup("Port Name: " + feature.properties.NAME); // Adjust popup content here
+               layer.bindPopup("Port Name: " + feature.properties.name); // Adjust popup content here
            }
        }).addTo(map);
    })

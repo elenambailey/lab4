@@ -6,7 +6,7 @@ L.tileLayer('https://api.mapbox.com/styles/v1/elenambailey/cloq5iebz006b01pw1r7g
 }).addTo(map);
 
 
-fetch('https://github.com/elenambailey/lab4/blob/main/data/ne_10m_ports.geojson%202')
+fetch('elenambailey/lab4/blob/main/data/ne_10m_ports.geojson%202')
    .then(response => response.json())
    .then(data => {
        L.geoJSON(data, {
